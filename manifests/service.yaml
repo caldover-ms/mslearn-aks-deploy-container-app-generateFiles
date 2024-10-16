@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: workflow-d
+  namespace: namespace-workflow-1729119958415
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: workflow-d
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000

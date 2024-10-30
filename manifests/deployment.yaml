@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: workflow-d
+  name: workflow
   labels:
-    app: workflow-d
+    app: workflow
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1729119958415
+  namespace: sample-app-namespace-1730322998850
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: workflow-d
+      app: workflow
   template:
     metadata:
       labels:
-        app: workflow-d
+        app: workflow
     spec:
       containers:
-        - name: workflow-d
-          image: r4edferregistry.azurecr.io/image-workflow-1729119958415:latest
+        - name: workflow
+          image: registry1730323095263.azurecr.io/image-workflow-1730322998845:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

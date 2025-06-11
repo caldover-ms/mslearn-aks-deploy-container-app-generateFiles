@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-workflow1-config
+  namespace: fleet-member-ca-westus2-cluster1-fm
+  labels:
+    app.kubernetes.io/name: test-workflow1
+    kubernetes.azure.com/generator: devhub
+data:

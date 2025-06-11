@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ca-workflow2-config
+  namespace: namespace-workflow-1749661846565
+  labels:
+    app.kubernetes.io/name: ca-workflow2
+    kubernetes.azure.com/generator: devhub
+data:
